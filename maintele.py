@@ -18,7 +18,10 @@ def help_command(update, context):
 def handle_message(update, context):
     text = str(update.message.text).lower()
     if (text == "send location"):
-        await context.sendVenue({location: {latitude:9.940739, longitude:78.131510}, title: 'CLOUDFLOOR',address: '3B,NMR Subburaman Road, Chinna Chokikulam, Tamil Nadu 625002'});
+        await context.sendVenue({chatId: , latitude:9.940739, longitude:78.131510, title: 'CLOUDFLOOR', address: '3B,NMR Subburaman Road, Chinna Chokikulam, Tamil Nadu 625002'})
+        '''
+        chatId : Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+        '''
     else:
         response = r.sample_responses(text)
         update.message.reply_text(response)
